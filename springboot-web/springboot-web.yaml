@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-web
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: springboot-web
+  template:
+    metadata:
+      labels:
+        app: springboot-web
+    spec:
+      containers:
+      - image: ukozaa/my-spring-boot-web:v1
+        name: springboot-web
+        ports:
+        - containerPort: 80
