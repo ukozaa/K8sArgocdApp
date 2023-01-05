@@ -8,5 +8,5 @@ spec:
     app: python-web
   ports:
   - nodePort: 31238
-    port: 82
+    port: 83
     targetPort: 80
